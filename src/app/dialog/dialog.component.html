@@ -1,0 +1,10 @@
+<h2 mat-dialog-title [innerHTML]="data.title"></h2>
+<mat-dialog-content [innerHTML]="data.message"></mat-dialog-content>
+<mat-dialog-actions class="flexbox-parent">
+  <div class="row justify-content-center">
+    <div class="col">
+      <button mat-button mat-raised-button color="primary" *ngIf="data.showOKBtn" (click)="close()">OK</button>
+      <button mat-button mat-raised-button mat-dialog-close *ngIf="data.showCancelBtn">Cancel</button>
+    </div>
+  </div>
+</mat-dialog-actions>
